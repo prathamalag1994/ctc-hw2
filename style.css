@@ -73,24 +73,21 @@ img {
   background-repeat: no-repeat;
   height: 200px;
   width: 500px;
-  -webkit-animation-name: drive;
   -webkit-animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-direction: normal;
-  -webkit-animation-play-state: paused;
+  -webkit-animation-play-state: running;
 }
 
 .spincar .wheel {
   width: 80px;
   position: absolute;
   top: 55px;
-  -webkit-animation-name: spin;
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -webkit-animation-play-state: paused; 
-  /* -play-state might be useful to change */
+  -webkit-animation-play-state: running; 
 }
 
 .spincar #wheel1 {
@@ -103,10 +100,10 @@ img {
 
 @-webkit-keyframes drive {
   from {
-    left:0px;
+    -webkit-transform:translate(0px,0px);
   }
   to {
-    right:-500px;
+    -webkit-transform:translate(500px,0px);
   }
 }
 
@@ -115,7 +112,7 @@ img {
     -webkit-transform:rotate(0deg);
   }
   to {
-    /* fill me out */
+    -webkit-transform:rotate(360deg);
   }
 }
 
@@ -134,3 +131,5 @@ img {
     width: 40px;
     position: absolute;
 }
+
+
